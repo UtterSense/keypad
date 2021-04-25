@@ -30,9 +30,9 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)
 include $(BUILD_SHARED_LIBRARY)
 
 
-#---------------------------------------------
-#Build the Keypad JNI shared library file here
-#--------------------------------------------- 
+#---------------------------------------------------------
+#Build the Keypad JNI shared library (App version) file here
+#--------------------------------------------------------- 
 #LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -44,3 +44,24 @@ LOCAL_SRC_FILES := keypad-app-jni.c
 LOCAL_C_INCLUDES := $(LOCAL_PATH)
 
 include $(BUILD_SHARED_LIBRARY)
+
+
+#-------------------------------------------------------------------
+#Build the Keypad JNI shared library (JAR Manager version) file here
+#------------------------------------------------------------------- 
+#LOCAL_PATH := $(call my-dir)
+include $(CLEAR_VARS)
+
+LOCAL_MODULE := libkeypad-man-jni
+#Module requires this library for Android logging utilities
+LOCAL_SHARED_LIBRARIES:= liblog libkeypad
+
+LOCAL_SRC_FILES := keypad-man-jni.c
+LOCAL_C_INCLUDES := $(LOCAL_PATH)
+
+include $(BUILD_SHARED_LIBRARY)
+
+
+
+
+
