@@ -14,7 +14,8 @@ JNIEXPORT jstring JNICALL
 Java_net_uttersense_keypadapp_MainActivity_stringFromJNI(JNIEnv *env, jobject thiz) {
 
     char mes[200];
-    strcpy(mes,jni_test());
+    //strcpy(mes,jni_test());
+    strcpy(mes,"We are calling the App version of the JNI!");
     LOGI("In stringFromJNI");
 
     //char mes[100];
