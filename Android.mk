@@ -36,11 +36,11 @@ include $(BUILD_SHARED_LIBRARY)
 #LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := libkeypad-lib
+LOCAL_MODULE := libkeypad-app-jni
 #Module requires this library for Android logging utilities
 LOCAL_SHARED_LIBRARIES:= liblog libkeypad
 
-LOCAL_SRC_FILES := keypad-lib.c
+LOCAL_SRC_FILES := keypad-app-jni.c
 LOCAL_C_INCLUDES := $(LOCAL_PATH)
 
 include $(BUILD_SHARED_LIBRARY)
